@@ -132,6 +132,13 @@ ${res['description']}
     toOpenFile.truncate()
     toOpenFile.close()
 
+    # chmod bin/*
+    bindir = join(fromPath, 'bin')
+    binlist = os.listdir(bindir)
+    for f in binlist:
+      pp = join(bindir, f)
+      os.chmod(pp, 0o755)
+
 def cmd(targetPath, name):
   questions[0]['default'] = name
   res = prompt(questions)
