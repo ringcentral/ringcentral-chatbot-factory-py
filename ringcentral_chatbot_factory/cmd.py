@@ -8,6 +8,7 @@ from zipfile import ZipFile
 import pydash as _
 import json
 import re
+from shutil import copy2
 
 tempDir = tempfile.gettempdir()
 
@@ -138,6 +139,12 @@ ${res['description']}
     for f in binlist:
       pp = join(bindir, f)
       os.chmod(pp, 0o755)
+
+    # create .env from .sample.env
+    copy2(
+      join(fromPath, '.sample.env'),
+      join(fromPath, '.env')
+    )
 
 def cmd(targetPath, name):
   questions[0]['default'] = name
