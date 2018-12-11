@@ -4,10 +4,6 @@ Cli tool to generate RingCentral chatbot project.
 
 ![screenshot](screenshots/cli.png)
 
-## Templates
-
-- [https://github.com/zxdong262/ringcentral-chatbot-template-python](https://github.com/zxdong262/ringcentral-chatbot-template-python)
-
 ## Use
 
 ```bash
@@ -19,28 +15,18 @@ rcf my-app
 # then carefully answer all questions, then the my-app folder will be created
 
 cd my-app
-# follow the instruction of my-app/README.md to dev/run/test the bot
+# follow the instruction of my-app/README.md to dev/run/test/deploy the bot
 ```
 
-## dev
+## Templates
 
-```bash
-# use virtualenv
-pip3 install virtualenv # might need sudo
+- [https://github.com/zxdong262/ringcentral-chatbot-template-python](https://github.com/zxdong262/ringcentral-chatbot-template-python)
 
-# init virtual env
-virtualenv venv --python=python3
+## Example bot apps
 
-# use env
-source ./venv/bin/activate
-
-# install deps
-pip install -r requirements.txt
-pip install twine pylint
-
-# test
-bin/test
-```
+- [date-time-chatbot](https://github.com/zxdong262/ringcentral-date-time-chatbot): simple Glip chatbot that can tell time/date.
+- [assistant-bot](https://github.com/zxdong262/ringcentral-assistant-bot): simple assistant Glip bot to show user/company information, this bot will show you how to access user data.
+- [survey-bot](https://github.com/zxdong262/ringcentral-survey-bot): example survey bot, this bot will show you how to create/use custom database wrapper.
 
 ## License
 
