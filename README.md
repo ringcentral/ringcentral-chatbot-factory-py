@@ -9,7 +9,6 @@ Cli tool to generate RingCentral chatbot project.
 ```bash
 # make sure you have python3/pip3 installed
 pip3 install ringcentral_chatbot_factory
-# or install it first
 
 rcf my-app
 # then carefully answer all questions, then the my-app folder will be created
