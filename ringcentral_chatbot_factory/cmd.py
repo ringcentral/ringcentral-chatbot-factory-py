@@ -146,9 +146,16 @@ ${res['description']}
       join(fromPath, '.env')
     )
 
-def cmd(targetPath, name):
+def cmd(targetPath, name, auto):
   questions[0]['default'] = name
-  res = prompt(questions)
+  res = {
+    'name': name,
+    'description': 'RingCentral Glip bot',
+    'npmName': re.sub(r'\s+', '-', name),
+    'version': '0.0.1'
+  }
+  if not auto:
+    res = prompt(questions)
   if not verifyResult(res):
     return quit()
 

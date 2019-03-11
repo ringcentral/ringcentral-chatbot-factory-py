@@ -4,6 +4,7 @@ import argparse
 import os
 from os.path import dirname, realpath, join, isabs
 import pydash as _
+import sys
 
 def main():
   cwd = os.getcwd()
@@ -18,6 +19,7 @@ Example: rcf my-chatbot-app
     metavar='p',
     help='Project folder name like my-chatbot-app'
   )
+  parser.add_argument('--auto', help=argparse.SUPPRESS, action='store_true')
 
   try:
     args = parser.parse_args()
@@ -33,5 +35,6 @@ Example: rcf my-chatbot-app
     p = name
     if not isabs(name):
       p = join(cwd, name)
+    auto = args.auto
 
-    cmd(p, name)
+    cmd(p, name, auto)
