@@ -38,7 +38,7 @@ cat << EOF
 
 RINGCENTRAL_BOT_SERVER prop=https://xxxx.ngrok.com
 
-2. Visit https://developer.ringcentral.com/new-app?name=Sample+Bot+App&desc=A+sample+app+created+in+conjunction+with+the+python+bot+framework&public=false&type=ServerBot&carriers=7710,7310,3420&permissions=ReadAccounts,EditExtensions,SubscriptionWebhook,Glip&redirectUri= to create app bot app, set https://xxxx.ngrok.com/bot-oauth as redirectUri in app setting, get credentials: Client ID and Client Secret from app credential page, and put it in .env:
+2. Visit https://developer.ringcentral.com/new-app?name=Sample+Bot+App&desc=A+sample+app+created+in+conjunction+with+the+python+bot+framework&public=true&type=ServerBot&carriers=7710,7310,3420&permissions=ReadAccounts,EditExtensions,SubscriptionWebhook,Glip&redirectUri= to create app bot app, set https://xxxx.ngrok.com/bot-oauth as redirectUri in app setting, get credentials: Client ID and Client Secret from app credential page, and put it in .env:
 
 RINGCENTRAL_BOT_CLIENT_ID=app Client ID
 RINGCENTRAL_BOT_CLIENT_SECRET=app Client Secret
