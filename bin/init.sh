@@ -4,18 +4,18 @@
 # curl -o- https://raw.githubusercontent.com/zxdong262/ringcentral-chatbot-factory-py/master/bin/init.sh | bash
 { # this ensures the entire script is downloaded #
 
-echo 'requires python3 and pip3'
-echo 'install ringcentral_chatbot_factory with pip3'
+echo -e '\033[34m=> requires python3 and pip3\033[0m'
+echo -e '\033[34m=> install ringcentral_chatbot_factory with pip3\033[0m'
 pip3 install 'ringcentral_chatbot_factory >= 0.1.1'
 NEW_UUID=$(LC_CTYPE=C tr -dc 0-9 < /dev/urandom | head -c 4 | xargs | cat)
-echo 'init bot project'
+echo '=> init bot project'
 FOLDER="ringcentral-chatbot$NEW_UUID"
 rcf $FOLDER --auto
 
-echo 'init project'
+echo '=> init project'
 cd $FOLDER
 
-echo 'use virtualenv'
+echo '=> use virtualenv'
 bin/init
 
 echo ""
@@ -24,16 +24,15 @@ echo ""
 echo ""
 echo "=============="
 echo ""
-echo "All project files are ready, run 'cd $FOLDER && source ./venv/bin/activate' first"
+echo -e "=> All project files are ready, run \033[34m'cd $FOLDER && source ./venv/bin/activate'\033[0m first"
 echo ""
 echo "=============="
 
 echo ""
 echo ""
-
+echo -e "\033[34m=> 3 more steps to run the bot.\033[0m"
+echo ""
 cat << EOF
-3 more steps to run the bot.
-
 1. Run ngrok proxy by "bin/proxy", and put the server link: https://xxxx.ngrok.com in .env set
 
 RINGCENTRAL_BOT_SERVER prop=https://xxxx.ngrok.com
