@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# wget -qO- https://raw.githubusercontent.com/zxdong262/ringcentral-chatbot-factory-py/master/bin/init.sh | bash
-# curl -o- https://raw.githubusercontent.com/zxdong262/ringcentral-chatbot-factory-py/master/bin/init.sh | bash
+# wget -qO- https://raw.githubusercontent.com/ringcentral/ringcentral-chatbot-factory-py/master/bin/init.sh | bash
+# curl -o- https://raw.githubusercontent.com/ringcentral/ringcentral-chatbot-factory-py/master/bin/init.sh | bash
 { # this ensures the entire script is downloaded #
 
 echo -e '\033[34m=> requires python3 and pip3\033[0m'

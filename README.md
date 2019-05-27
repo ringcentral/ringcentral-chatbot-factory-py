@@ -1,4 +1,4 @@
-# [ringcentral-chatbot-factory-py](https://github.com/zxdong262/ringcentral-chatbot-factory-py)
+# [ringcentral-chatbot-factory-py](https://github.com/ringcentral/ringcentral-chatbot-factory-py)
 
 Cli tool to generate RingCentral chatbot project.
 
